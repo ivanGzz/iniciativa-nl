@@ -11,6 +11,11 @@
     <?php endif; ?>
     */ ?>
     <?php if ($user->ID != 0): ?>
+        <li role="presentation" <?php if ( is_page( 'modelo-de-participacion' ) ): ?>class="active"<?php endif; ?>>
+            <a href="/modelo-de-participacion">Modelo de participación</a>
+        </li>
+    <?php endif; ?>
+    <?php if ($user->ID != 0): ?>
         <li role="presentation" <?php if ( is_page( 'descargas' ) ): ?>class="active"<?php endif; ?>>
             <a href="/descargas">Descargas</a>
         </li>

@@ -1,3 +1,7 @@
 .whitespace-bottom {
     margin-bottom: 20px;
 }
+
+#register-page .register-section {
+    width: 100% !important;
+}
