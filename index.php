@@ -2,6 +2,8 @@
 <div class="container">
     <?php get_header('nav'); ?>
     <?php if ( bp_has_members(bp_ajax_querystring( 'members' ) ) ) : ?>
+        <p><?php bp_members_pagination_count(); ?></p>
+        <p><?php bp_members_pagination_links(); ?></p>
         <?php while ( bp_members() ) : bp_the_member(); ?>
             <div class="panel panel-default">
                 <div class="panel-body container">
@@ -17,6 +19,9 @@
                 </div>
             </div>
         <?php endwhile; ?>
+        <?php bp_member_hidden_fields(); ?>
+        <p><?php bp_members_pagination_count(); ?></p>
+        <p><?php bp_members_pagination_links(); ?></p>
     <?php endif; ?>
 </div>
 <?php get_footer(); ?>
